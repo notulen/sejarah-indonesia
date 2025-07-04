@@ -1,0 +1,10 @@
+# Manual per-event overrides.
+# Each top-level key is the 'judul' of an event.
+# Example structure:
+# "Proklamasi Kemerdekaan Indonesia":
+#   deskripsi: "Deskripsi yang diperbaiki di sini"
+#   sumber:
+#     - url: "https://contoso.example"
+#       judul: "Arsip Nasional"
+#       tipe: "arsip"
+#       diakses: "2024-07-04"

@@ -40,7 +40,20 @@
       "type": "array",
       "description": "Sumber dokumentasi dan data peristiwa",
       "items": {
-        "type": "string"
+        "oneOf": [
+          { "type": "string" },
+          {
+            "type": "object",
+            "properties": {
+              "judul": { "type": "string", "description": "Judul atau nama sumber" },
+              "url": { "type": "string", "format": "uri", "description": "URL ke sumber" },
+              "tipe": { "type": "string", "description": "Jenis sumber (wikidata, wikipedia, jurnal, dll)" },
+              "diakses": { "type": "string", "format": "date", "description": "Tanggal akses (format: YYYY-MM-DD)" }
+            },
+            "required": ["url"],
+            "additionalProperties": false
+          }
+        ]
       }
     }
   },

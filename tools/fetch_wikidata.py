@@ -37,7 +37,7 @@ def save_raw(data: dict, path: pathlib.Path = RAW_OUTPUT) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
     with path.open("w", encoding="utf-8") as fh:
         json.dump(data, fh, ensure_ascii=False, indent=2)
-    print(f"Raw data written to {path.relative_to(pathlib.Path.cwd())}")
+    print(f"Raw data written to {path}")
 
 
 def main() -> None:

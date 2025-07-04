@@ -154,7 +154,7 @@ def main() -> None:
 
     # Write unified dataset
     OUTPUT_PATH.write_text(json.dumps(events, ensure_ascii=False, indent=2), encoding="utf-8")
-    print(f"Wrote {len(events)} events to {OUTPUT_PATH.relative_to(pathlib.Path.cwd())}")
+    print(f"Wrote {len(events)} events to {OUTPUT_PATH}")
 
     # Regenerate README
     mermaid_chart = generate_mermaid_gantt(events)
